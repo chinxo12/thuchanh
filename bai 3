@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Nhập năm sinh của bạn
+<input type="text" id="namSinh">
+<button onclick="kiemTra()">Kiểm tra</button>
+<h2 id="tuoicuaban"> </h2>
+<script>
+
+function kiemTra (){
+    let a = parseInt(document.getElementById('namSinh').value);
+    let can = a % 10;
+    let chi = a % 12;
+    console.log(can)
+    console.log(chi)
+    switch (can){
+        case 0:
+            b = "Canh";
+            break;
+        case 1:
+            b =  "Tân";
+            break;
+        case 2:
+            b =  "Nhâm";
+            break;
+        case 3:
+             b =  "Quý";
+            break;
+        case 4:
+            b =  "Giáp";
+            break;
+        case 5:
+            b =  "Ất";
+            break;
+        case 6:
+            b =  "Bính";
+            break;
+        case 7:
+            b = "Đinh";
+            break;
+        case 8:
+            b =  "Mậu";
+            break;
+        case 9:
+            b =  "Kỷ";
+            break;
+            console.log(can)
+    }
+    switch (chi){
+        case 0:
+            c = "Thân"
+            break;
+        case 1:
+            c = "Dậu"
+            break;
+        case 2:
+            c = "Tuất"
+            break;
+        case 3:
+            c = "Hợi" ;
+            break;
+        case 4:
+            c = "Tý";
+            break;
+        case 5:
+            c = "Sửu"
+            break;
+        case 6:
+            c = "Dần";
+            break;
+        case 7:
+            c = "Mão";
+            break;
+        case 8:
+            c = "Thìn";
+            break;
+        case 9:
+            c = "Tỵ";
+            break;
+        case 10:
+            c = "Ngọ";
+            break;
+        case 11:
+            c = "Mùi";
+            break;
+            console.log(c)
+    }
+    let d = b + " &nbsp" + c
+    document.getElementById('tuoicuaban').innerHTML = "Tuổi của bạn là: " + d
+}
+
+</script>
+</body>
+</html>
