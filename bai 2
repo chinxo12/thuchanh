@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body >
+<h2>Nhập độ dài cạnh thứ nhất:</h2>
+<input type="number" id="canh1"> <br>
+<h2>Nhập độ dài cạnh thứ hai:</h2>
+<input type="number" id="canh2"> <br>
+<h2>Nhập độ dài cạnh thứ ba :</h2>
+<input type="number" id="canh3"> <br>
+<button style="margin-top: 20px" onclick="check ()">Kiểm tra</button>
+
+<script>
+    function check () {
+        let a = parseInt(document.getElementById('canh1').value);
+        let b = parseInt(document.getElementById('canh2').value);
+        let c = parseInt(document.getElementById('canh3').value);
+        if (a + b > c && a + c > b && b + c > a) {
+            if (a * a + b * b === c * c || b * b + c * c === a * a || a * a + c * c === b * b) {
+                document.write('Đây là ba cạnh của tam giác vuông');
+
+
+            } else {
+                document.write('Đây là tam giác thường')
+            }
+        }else
+            document.write('Đây không phải ba cạnh của tam giác');
+    }
+</script>
+
+</body>
+</html>
